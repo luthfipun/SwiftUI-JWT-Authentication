@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,11 @@
 		A683AA8A25F1B67500385958 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A683AA8925F1B67500385958 /* Preview Assets.xcassets */; };
 		A683AA8C25F1B67500385958 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AA8B25F1B67500385958 /* Persistence.swift */; };
 		A683AA8F25F1B67500385958 /* SwiftUI_JWT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A683AA8D25F1B67500385958 /* SwiftUI_JWT.xcdatamodeld */; };
+		A683AA9B25F1B77F00385958 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AA9A25F1B77F00385958 /* Home.swift */; };
+		A683AA9F25F1B82900385958 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AA9E25F1B82900385958 /* Auth.swift */; };
+		A683AAA325F1B87800385958 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AAA225F1B87800385958 /* Login.swift */; };
+		A683AAA725F1B8AF00385958 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AAA625F1B8AF00385958 /* Register.swift */; };
+		A683AAAB25F1C1BC00385958 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = A683AAAA25F1C1BC00385958 /* AlertToast */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,10 @@
 		A683AA8B25F1B67500385958 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		A683AA8E25F1B67500385958 /* SwiftUI_JWT.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftUI_JWT.xcdatamodel; sourceTree = "<group>"; };
 		A683AA9025F1B67500385958 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A683AA9A25F1B77F00385958 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		A683AA9E25F1B82900385958 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		A683AAA225F1B87800385958 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		A683AAA625F1B8AF00385958 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A683AAAB25F1C1BC00385958 /* AlertToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +66,9 @@
 		A683AA8125F1B67400385958 /* SwiftUI JWT */ = {
 			isa = PBXGroup;
 			children = (
+				A683AA9925F1B76200385958 /* VIewModel */,
+				A683AA9825F1B75C00385958 /* Model */,
+				A683AA9725F1B75500385958 /* View */,
 				A683AA8225F1B67400385958 /* SwiftUI_JWTApp.swift */,
 				A683AA8425F1B67400385958 /* ContentView.swift */,
 				A683AA8625F1B67500385958 /* Assets.xcassets */,
@@ -75,6 +88,39 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A683AA9725F1B75500385958 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A683AAA125F1B86A00385958 /* Auth */,
+				A683AA9A25F1B77F00385958 /* Home.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A683AA9825F1B75C00385958 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A683AA9925F1B76200385958 /* VIewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIewModel;
+			sourceTree = "<group>";
+		};
+		A683AAA125F1B86A00385958 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				A683AA9E25F1B82900385958 /* Auth.swift */,
+				A683AAA225F1B87800385958 /* Login.swift */,
+				A683AAA625F1B8AF00385958 /* Register.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,6 +137,9 @@
 			dependencies = (
 			);
 			name = "SwiftUI JWT";
+			packageProductDependencies = (
+				A683AAAA25F1C1BC00385958 /* AlertToast */,
+			);
 			productName = "SwiftUI JWT";
 			productReference = A683AA7F25F1B67400385958 /* SwiftUI JWT.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +167,9 @@
 				Base,
 			);
 			mainGroup = A683AA7625F1B67400385958;
+			packageReferences = (
+				A683AAA925F1C1BC00385958 /* XCRemoteSwiftPackageReference "AlertToast" */,
+			);
 			productRefGroup = A683AA8025F1B67400385958 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,10 +196,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A683AAA325F1B87800385958 /* Login.swift in Sources */,
 				A683AA8C25F1B67500385958 /* Persistence.swift in Sources */,
 				A683AA8525F1B67400385958 /* ContentView.swift in Sources */,
+				A683AA9B25F1B77F00385958 /* Home.swift in Sources */,
 				A683AA8325F1B67400385958 /* SwiftUI_JWTApp.swift in Sources */,
 				A683AA8F25F1B67500385958 /* SwiftUI_JWT.xcdatamodeld in Sources */,
+				A683AAA725F1B8AF00385958 /* Register.swift in Sources */,
+				A683AA9F25F1B82900385958 /* Auth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +392,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A683AAA925F1C1BC00385958 /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A683AAAA25F1C1BC00385958 /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A683AAA925F1C1BC00385958 /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		A683AA8D25F1B67500385958 /* SwiftUI_JWT.xcdatamodeld */ = {
