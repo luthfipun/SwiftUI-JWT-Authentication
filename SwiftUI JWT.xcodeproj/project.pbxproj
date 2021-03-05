@@ -1,0 +1,354 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A683AA8325F1B67400385958 /* SwiftUI_JWTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AA8225F1B67400385958 /* SwiftUI_JWTApp.swift */; };
+		A683AA8525F1B67400385958 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AA8425F1B67400385958 /* ContentView.swift */; };
+		A683AA8725F1B67500385958 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A683AA8625F1B67500385958 /* Assets.xcassets */; };
+		A683AA8A25F1B67500385958 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A683AA8925F1B67500385958 /* Preview Assets.xcassets */; };
+		A683AA8C25F1B67500385958 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AA8B25F1B67500385958 /* Persistence.swift */; };
+		A683AA8F25F1B67500385958 /* SwiftUI_JWT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A683AA8D25F1B67500385958 /* SwiftUI_JWT.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A683AA7F25F1B67400385958 /* SwiftUI JWT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI JWT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A683AA8225F1B67400385958 /* SwiftUI_JWTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_JWTApp.swift; sourceTree = "<group>"; };
+		A683AA8425F1B67400385958 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A683AA8625F1B67500385958 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A683AA8925F1B67500385958 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A683AA8B25F1B67500385958 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		A683AA8E25F1B67500385958 /* SwiftUI_JWT.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftUI_JWT.xcdatamodel; sourceTree = "<group>"; };
+		A683AA9025F1B67500385958 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A683AA7C25F1B67400385958 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A683AA7625F1B67400385958 = {
+			isa = PBXGroup;
+			children = (
+				A683AA8125F1B67400385958 /* SwiftUI JWT */,
+				A683AA8025F1B67400385958 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A683AA8025F1B67400385958 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A683AA7F25F1B67400385958 /* SwiftUI JWT.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A683AA8125F1B67400385958 /* SwiftUI JWT */ = {
+			isa = PBXGroup;
+			children = (
+				A683AA8225F1B67400385958 /* SwiftUI_JWTApp.swift */,
+				A683AA8425F1B67400385958 /* ContentView.swift */,
+				A683AA8625F1B67500385958 /* Assets.xcassets */,
+				A683AA8B25F1B67500385958 /* Persistence.swift */,
+				A683AA9025F1B67500385958 /* Info.plist */,
+				A683AA8D25F1B67500385958 /* SwiftUI_JWT.xcdatamodeld */,
+				A683AA8825F1B67500385958 /* Preview Content */,
+			);
+			path = "SwiftUI JWT";
+			sourceTree = "<group>";
+		};
+		A683AA8825F1B67500385958 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A683AA8925F1B67500385958 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A683AA7E25F1B67400385958 /* SwiftUI JWT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A683AA9325F1B67500385958 /* Build configuration list for PBXNativeTarget "SwiftUI JWT" */;
+			buildPhases = (
+				A683AA7B25F1B67400385958 /* Sources */,
+				A683AA7C25F1B67400385958 /* Frameworks */,
+				A683AA7D25F1B67400385958 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftUI JWT";
+			productName = "SwiftUI JWT";
+			productReference = A683AA7F25F1B67400385958 /* SwiftUI JWT.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A683AA7725F1B67400385958 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					A683AA7E25F1B67400385958 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = A683AA7A25F1B67400385958 /* Build configuration list for PBXProject "SwiftUI JWT" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A683AA7625F1B67400385958;
+			productRefGroup = A683AA8025F1B67400385958 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A683AA7E25F1B67400385958 /* SwiftUI JWT */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A683AA7D25F1B67400385958 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A683AA8A25F1B67500385958 /* Preview Assets.xcassets in Resources */,
+				A683AA8725F1B67500385958 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A683AA7B25F1B67400385958 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A683AA8C25F1B67500385958 /* Persistence.swift in Sources */,
+				A683AA8525F1B67400385958 /* ContentView.swift in Sources */,
+				A683AA8325F1B67400385958 /* SwiftUI_JWTApp.swift in Sources */,
+				A683AA8F25F1B67500385958 /* SwiftUI_JWT.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A683AA9125F1B67500385958 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A683AA9225F1B67500385958 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A683AA9425F1B67500385958 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI JWT/Preview Content\"";
+				DEVELOPMENT_TEAM = 5ZSUA7833L;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "SwiftUI JWT/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.luthfipun.SwiftUI-JWT";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A683AA9525F1B67500385958 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI JWT/Preview Content\"";
+				DEVELOPMENT_TEAM = 5ZSUA7833L;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "SwiftUI JWT/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.luthfipun.SwiftUI-JWT";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A683AA7A25F1B67400385958 /* Build configuration list for PBXProject "SwiftUI JWT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A683AA9125F1B67500385958 /* Debug */,
+				A683AA9225F1B67500385958 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A683AA9325F1B67500385958 /* Build configuration list for PBXNativeTarget "SwiftUI JWT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A683AA9425F1B67500385958 /* Debug */,
+				A683AA9525F1B67500385958 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A683AA8D25F1B67500385958 /* SwiftUI_JWT.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A683AA8E25F1B67500385958 /* SwiftUI_JWT.xcdatamodel */,
+			);
+			currentVersion = A683AA8E25F1B67500385958 /* SwiftUI_JWT.xcdatamodel */;
+			path = SwiftUI_JWT.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A683AA7725F1B67400385958 /* Project object */;
+}
