@@ -14,6 +14,7 @@ struct Login: View {
     @State var password: String = ""
     @Binding var isLogin: Bool
     @ObservedObject var viewModel: UserViewModel
+    @Environment(\.managedObjectContext) var context
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -45,7 +46,7 @@ struct Login: View {
             
             Button(action: {
                 
-                viewModel.loginUser(email: email, password: password)
+                viewModel.loginUser(context: context, email: email, password: password)
                 
             }, label: {
                 Text("Login")

@@ -26,6 +26,9 @@
 		A683AAC825F252F300385958 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AAC725F252F300385958 /* ApiService.swift */; };
 		A683AACD25F308F700385958 /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AACC25F308F700385958 /* RemoteService.swift */; };
 		A683AAD325F30F6500385958 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AAD225F30F6500385958 /* LoginUseCase.swift */; };
+		A683AAD725F316D900385958 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AAD525F316D900385958 /* User+CoreDataClass.swift */; };
+		A683AAD825F316D900385958 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AAD625F316D900385958 /* User+CoreDataProperties.swift */; };
+		A683AADC25F3180D00385958 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AADB25F3180D00385958 /* Database.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,9 @@
 		A683AAC725F252F300385958 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		A683AACC25F308F700385958 /* RemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteService.swift; sourceTree = "<group>"; };
 		A683AAD225F30F6500385958 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		A683AAD525F316D900385958 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A683AAD625F316D900385958 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A683AADB25F3180D00385958 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,8 @@
 		A683AA7625F1B67400385958 = {
 			isa = PBXGroup;
 			children = (
+				A683AAD525F316D900385958 /* User+CoreDataClass.swift */,
+				A683AAD625F316D900385958 /* User+CoreDataProperties.swift */,
 				A683AA8125F1B67400385958 /* SwiftUI JWT */,
 				A683AA8025F1B67400385958 /* Products */,
 			);
@@ -145,6 +153,7 @@
 		A683AAB425F1D48E00385958 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				A683AADA25F317F100385958 /* CoreData */,
 				A683AAC325F2505F00385958 /* Remote */,
 			);
 			path = DataSources;
@@ -175,6 +184,14 @@
 				A683AACC25F308F700385958 /* RemoteService.swift */,
 			);
 			path = Remote;
+			sourceTree = "<group>";
+		};
+		A683AADA25F317F100385958 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A683AADB25F3180D00385958 /* Database.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +277,8 @@
 				A683AA9B25F1B77F00385958 /* Home.swift in Sources */,
 				A683AA8325F1B67400385958 /* SwiftUI_JWTApp.swift in Sources */,
 				A683AA8F25F1B67500385958 /* SwiftUI_JWT.xcdatamodeld in Sources */,
+				A683AAD825F316D900385958 /* User+CoreDataProperties.swift in Sources */,
+				A683AAD725F316D900385958 /* User+CoreDataClass.swift in Sources */,
 				A683AAC525F2507F00385958 /* ApiClient.swift in Sources */,
 				A683AAA725F1B8AF00385958 /* Register.swift in Sources */,
 				A683AABA25F1FBE100385958 /* RegisterUseCase.swift in Sources */,
@@ -267,6 +286,7 @@
 				A683AAB225F1D2BC00385958 /* UserModel.swift in Sources */,
 				A683AA9F25F1B82900385958 /* Auth.swift in Sources */,
 				A683AABE25F1FF7500385958 /* Utils.swift in Sources */,
+				A683AADC25F3180D00385958 /* Database.swift in Sources */,
 				A683AAD325F30F6500385958 /* LoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

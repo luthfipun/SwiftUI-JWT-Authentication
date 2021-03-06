@@ -16,6 +16,7 @@ struct Register: View {
     @Binding var isLogin: Bool
     
     @ObservedObject var viewModel: UserViewModel
+    @Environment(\.managedObjectContext) var context
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -55,7 +56,7 @@ struct Register: View {
             
             Button(action: {
                 
-                viewModel.registerUser(name: name, email: email, password: password)
+                viewModel.registerUser(context: context, name: name, email: email, password: password)
                 
             }, label: {
                 Text("Register Now")

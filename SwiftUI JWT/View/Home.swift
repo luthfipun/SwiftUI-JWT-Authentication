@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct Home: View {
+    
+    @StateObject var viewModel = UserViewModel()
+    @Environment(\.managedObjectContext) var context
+    @State var user: User
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Hello, \(user.name)!")
+            Text("Your mail : \(user.email)")
+            
+            Button(action: {
+                viewModel.logoutUser(context: context, user: user)
+            }, label: {
+                Text("Logout")
+                    .padding()
+            })
+        }
     }
 }
 

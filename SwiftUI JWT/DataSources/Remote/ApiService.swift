@@ -31,7 +31,7 @@ extension ApiService {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         if !token.isEmpty {
-            request.setValue("Bearer + \(token)", forHTTPHeaderField: "Authorization")
+            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         }
         
         switch method {

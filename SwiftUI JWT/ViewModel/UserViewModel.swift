@@ -7,9 +7,9 @@
 
 import Foundation
 import Combine
+import CoreData
 
 class UserViewModel: ObservableObject {
-    @Published var userModel: UserModel = UserModel()
     @Published var isLoading: Bool = false
     
     @Published var errorMessage: String = ""
@@ -20,7 +20,15 @@ class UserViewModel: ObservableObject {
 
 extension UserViewModel {
     
-    func registerUser(name: String, email: String, password: String) {
+    func saveUser(context: NSManagedObjectContext, userModel: UserModel) {
+        Database().insertUser(context: context, userModel: userModel)
+    }
+    
+    func deleteUser(context: NSManagedObjectContext, user: User) {
+        Database().deleteUser(context: context, user: user)
+    }
+    
+    func registerUser(context: NSManagedObjectContext, name: String, email: String, password: String) {
         self.isLoading.toggle()
         let formData = RegisterUseCase(name: name, email: email, password: password)
         cancellableToken = RemoteService.register(registerUseCase: formData)
@@ -37,11 +45,11 @@ extension UserViewModel {
                     self.errorMessage = response.message
                     return
                 }
-                self.userModel = response
+                self.saveUser(context: context, userModel: response)
             })
     }
     
-    func loginUser(email: String, password: String) {
+    func loginUser(context: NSManagedObjectContext, email: String, password: String) {
         self.isLoading.toggle()
         let formData = LoginUseCase(email: email, password: password)
         cancellableToken = RemoteService.login(loginUseCase: formData)
@@ -58,7 +66,20 @@ extension UserViewModel {
                     self.errorMessage = response.message
                     return
                 }
-                self.userModel = response
+                self.saveUser(context: context, userModel: response)
+            })
+    }
+    
+    func logoutUser(context: NSManagedObjectContext, user: User) {
+        cancellableToken = RemoteService.logout(token: user.token)
+            .mapError({ (error) -> Error in
+                print(error)
+                return error
+            })
+            .sink(receiveCompletion: {_ in}, receiveValue: { response in
+                if response.code == 200 {
+                    self.deleteUser(context: context, user: user)
+                }
             })
     }
 }
