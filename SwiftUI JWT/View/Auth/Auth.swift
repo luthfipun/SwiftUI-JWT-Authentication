@@ -14,7 +14,7 @@ struct Auth: View {
     
     var body: some View {
         if isLogin {
-            Login(isLogin: $isLogin)
+            Login(isLogin: $isLogin, viewModel: viewModel)
         }else {
             Register(isLogin: $isLogin, viewModel: viewModel)
         }

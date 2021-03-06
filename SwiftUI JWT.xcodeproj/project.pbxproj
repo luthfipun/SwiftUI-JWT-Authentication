@@ -25,6 +25,7 @@
 		A683AAC525F2507F00385958 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AAC425F2507F00385958 /* ApiClient.swift */; };
 		A683AAC825F252F300385958 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AAC725F252F300385958 /* ApiService.swift */; };
 		A683AACD25F308F700385958 /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AACC25F308F700385958 /* RemoteService.swift */; };
+		A683AAD325F30F6500385958 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AAD225F30F6500385958 /* LoginUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		A683AAC425F2507F00385958 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		A683AAC725F252F300385958 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		A683AACC25F308F700385958 /* RemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteService.swift; sourceTree = "<group>"; };
+		A683AAD225F30F6500385958 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				A683AAB925F1FBE100385958 /* RegisterUseCase.swift */,
+				A683AAD225F30F6500385958 /* LoginUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				A683AAB225F1D2BC00385958 /* UserModel.swift in Sources */,
 				A683AA9F25F1B82900385958 /* Auth.swift in Sources */,
 				A683AABE25F1FF7500385958 /* Utils.swift in Sources */,
+				A683AAD325F30F6500385958 /* LoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

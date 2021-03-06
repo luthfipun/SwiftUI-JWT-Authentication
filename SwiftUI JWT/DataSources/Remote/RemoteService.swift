@@ -14,6 +14,7 @@ struct RemoteService {
 
 enum ApiPath: String {
     case register = "register"
+    case login = "login"
 }
 
 extension RemoteService {
@@ -21,6 +22,14 @@ extension RemoteService {
     static func register(registerUseCase: RegisterUseCase) -> AnyPublisher<UserModel, Error> {
         let formData = try! JSONEncoder().encode(registerUseCase)
         let request = ApiService.request(.register, method: .post, formData: formData)
+        return apiClient.run(request)
+            .map(\.value)
+            .eraseToAnyPublisher()
+    }
+    
+    static func login(loginUseCase: LoginUseCase) -> AnyPublisher<UserModel, Error> {
+        let formData = try! JSONEncoder().encode(loginUseCase)
+        let request = ApiService.request(.login, method: .post, formData: formData)
         return apiClient.run(request)
             .map(\.value)
             .eraseToAnyPublisher()

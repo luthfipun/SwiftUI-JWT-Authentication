@@ -25,6 +25,7 @@ extension UserViewModel {
         let formData = RegisterUseCase(name: name, email: email, password: password)
         cancellableToken = RemoteService.register(registerUseCase: formData)
             .mapError({ (error) -> Error in
+                self.isLoading.toggle()
                 print(error)
                 return error
             })
@@ -38,6 +39,26 @@ extension UserViewModel {
                 }
                 self.userModel = response
             })
-        
+    }
+    
+    func loginUser(email: String, password: String) {
+        self.isLoading.toggle()
+        let formData = LoginUseCase(email: email, password: password)
+        cancellableToken = RemoteService.login(loginUseCase: formData)
+            .mapError({ (error) -> Error in
+                self.isLoading.toggle()
+                print(error)
+                return error
+            })
+            .sink(receiveCompletion: {_ in}, receiveValue: { response in
+                self.isLoading.toggle()
+                
+                if response.code != 200 {
+                    self.isError.toggle()
+                    self.errorMessage = response.message
+                    return
+                }
+                self.userModel = response
+            })
     }
 }

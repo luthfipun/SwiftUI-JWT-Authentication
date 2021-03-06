@@ -6,14 +6,14 @@
 //
 
 import SwiftUI
+import AlertToast
 
 struct Login: View {
     
     @State var email: String = ""
     @State var password: String = ""
-    
-    @State var isLoading: Bool = false
     @Binding var isLogin: Bool
+    @ObservedObject var viewModel: UserViewModel
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -44,19 +44,22 @@ struct Login: View {
             Spacer()
             
             Button(action: {
-                isLoading.toggle()
+                
+                viewModel.loginUser(email: email, password: password)
+                
             }, label: {
                 Text("Login")
                     .frame(maxWidth: .infinity, maxHeight: 50)
                     .font(.headline)
                     .foregroundColor(.white)
-                    .background(isLoading ? Color.blue.opacity(0.2) : Color.blue)
+                    .background(viewModel.isLoading ? Color.blue.opacity(0.2) : Color.blue)
                     .clipShape(Capsule())
                     .disabled(true)
                     .overlay(
-                        isLoading ? ProgressView() : nil
+                        viewModel.isLoading ? ProgressView() : nil
                     )
             })
+            .disabled(viewModel.isLoading)
             
             Button(action: {
                 isLogin.toggle()
@@ -66,6 +69,9 @@ struct Login: View {
             }).padding(.top, 5)
             
         }.padding()
+        .toast(isPresenting: $viewModel.isError, alert: {
+            AlertToast(displayMode: .hud, type: .regular, subTitle: viewModel.errorMessage)
+        })
     }
 }
 
