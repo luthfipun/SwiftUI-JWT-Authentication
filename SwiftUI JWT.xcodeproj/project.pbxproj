@@ -18,6 +18,13 @@
 		A683AAA325F1B87800385958 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AAA225F1B87800385958 /* Login.swift */; };
 		A683AAA725F1B8AF00385958 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AAA625F1B8AF00385958 /* Register.swift */; };
 		A683AAAB25F1C1BC00385958 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = A683AAAA25F1C1BC00385958 /* AlertToast */; };
+		A683AAB225F1D2BC00385958 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AAB125F1D2BC00385958 /* UserModel.swift */; };
+		A683AABA25F1FBE100385958 /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AAB925F1FBE100385958 /* RegisterUseCase.swift */; };
+		A683AABE25F1FF7500385958 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AABD25F1FF7500385958 /* Utils.swift */; };
+		A683AAC125F2038600385958 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AAC025F2038600385958 /* UserViewModel.swift */; };
+		A683AAC525F2507F00385958 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AAC425F2507F00385958 /* ApiClient.swift */; };
+		A683AAC825F252F300385958 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AAC725F252F300385958 /* ApiService.swift */; };
+		A683AACD25F308F700385958 /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683AACC25F308F700385958 /* RemoteService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +40,13 @@
 		A683AA9E25F1B82900385958 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		A683AAA225F1B87800385958 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		A683AAA625F1B8AF00385958 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		A683AAB125F1D2BC00385958 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		A683AAB925F1FBE100385958 /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
+		A683AABD25F1FF7500385958 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		A683AAC025F2038600385958 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		A683AAC425F2507F00385958 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		A683AAC725F252F300385958 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		A683AACC25F308F700385958 /* RemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +80,10 @@
 		A683AA8125F1B67400385958 /* SwiftUI JWT */ = {
 			isa = PBXGroup;
 			children = (
-				A683AA9925F1B76200385958 /* VIewModel */,
+				A683AABC25F1FF6B00385958 /* Utils */,
+				A683AAB825F1FBCE00385958 /* UseCase */,
+				A683AAB425F1D48E00385958 /* DataSources */,
+				A683AA9925F1B76200385958 /* ViewModel */,
 				A683AA9825F1B75C00385958 /* Model */,
 				A683AA9725F1B75500385958 /* View */,
 				A683AA8225F1B67400385958 /* SwiftUI_JWTApp.swift */,
@@ -100,15 +117,17 @@
 		A683AA9825F1B75C00385958 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A683AAB125F1D2BC00385958 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		A683AA9925F1B76200385958 /* VIewModel */ = {
+		A683AA9925F1B76200385958 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A683AAC025F2038600385958 /* UserViewModel.swift */,
 			);
-			path = VIewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A683AAA125F1B86A00385958 /* Auth */ = {
@@ -119,6 +138,40 @@
 				A683AAA625F1B8AF00385958 /* Register.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		A683AAB425F1D48E00385958 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				A683AAC325F2505F00385958 /* Remote */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		A683AAB825F1FBCE00385958 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				A683AAB925F1FBE100385958 /* RegisterUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		A683AABC25F1FF6B00385958 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A683AABD25F1FF7500385958 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A683AAC325F2505F00385958 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				A683AAC425F2507F00385958 /* ApiClient.swift */,
+				A683AAC725F252F300385958 /* ApiService.swift */,
+				A683AACC25F308F700385958 /* RemoteService.swift */,
+			);
+			path = Remote;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,13 +250,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				A683AAA325F1B87800385958 /* Login.swift in Sources */,
+				A683AACD25F308F700385958 /* RemoteService.swift in Sources */,
 				A683AA8C25F1B67500385958 /* Persistence.swift in Sources */,
 				A683AA8525F1B67400385958 /* ContentView.swift in Sources */,
+				A683AAC825F252F300385958 /* ApiService.swift in Sources */,
 				A683AA9B25F1B77F00385958 /* Home.swift in Sources */,
 				A683AA8325F1B67400385958 /* SwiftUI_JWTApp.swift in Sources */,
 				A683AA8F25F1B67500385958 /* SwiftUI_JWT.xcdatamodeld in Sources */,
+				A683AAC525F2507F00385958 /* ApiClient.swift in Sources */,
 				A683AAA725F1B8AF00385958 /* Register.swift in Sources */,
+				A683AABA25F1FBE100385958 /* RegisterUseCase.swift in Sources */,
+				A683AAC125F2038600385958 /* UserViewModel.swift in Sources */,
+				A683AAB225F1D2BC00385958 /* UserModel.swift in Sources */,
 				A683AA9F25F1B82900385958 /* Auth.swift in Sources */,
+				A683AABE25F1FF7500385958 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

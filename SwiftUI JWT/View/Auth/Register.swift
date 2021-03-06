@@ -13,9 +13,9 @@ struct Register: View {
     @State var name: String = ""
     @State var email: String = ""
     @State var password: String = ""
-    
-    @State var isLoading: Bool = false
     @Binding var isLogin: Bool
+    
+    @ObservedObject var viewModel: UserViewModel
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -54,19 +54,20 @@ struct Register: View {
             Spacer()
             
             Button(action: {
-                isLoading.toggle()
+                
+                viewModel.registerUser(name: name, email: email, password: password)
+                
             }, label: {
                 Text("Register Now")
                     .frame(maxWidth: .infinity, maxHeight: 50)
                     .font(.headline)
                     .foregroundColor(.white)
-                    .background(isLoading ? Color.blue.opacity(0.2) : Color.blue)
+                    .background(viewModel.isLoading ? Color.blue.opacity(0.2) : Color.blue)
                     .clipShape(Capsule())
-                    .disabled(true)
                     .overlay(
-                        isLoading ? ProgressView() : nil
+                        viewModel.isLoading ? ProgressView() : nil
                     )
-            })
+            }).disabled(viewModel.isLoading)
             
             Button(action: {
                 isLogin.toggle()
@@ -75,7 +76,11 @@ struct Register: View {
                     .frame(maxWidth: .infinity, maxHeight: 50)
             }).padding(.top, 5)
             
-        }.padding()
+        }
+        .padding()
+        .toast(isPresenting: $viewModel.isError) {
+            AlertToast(displayMode: .hud, type: .regular, subTitle: viewModel.errorMessage)
+        }
     }
 }
 

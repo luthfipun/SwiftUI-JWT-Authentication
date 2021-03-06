@@ -9,13 +9,14 @@ import SwiftUI
 
 struct Auth: View {
     
+    @ObservedObject var viewModel = UserViewModel()
     @State var isLogin: Bool = false
     
     var body: some View {
         if isLogin {
             Login(isLogin: $isLogin)
         }else {
-            Register(isLogin: $isLogin)
+            Register(isLogin: $isLogin, viewModel: viewModel)
         }
     }
 }
